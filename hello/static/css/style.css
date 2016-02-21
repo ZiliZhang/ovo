@@ -55,8 +55,9 @@ body {
     border: 3px solid #d8d8d8
 }
 
-.reg button {
-    margin-left: 10px;
+.reg .btn-submit {
+    background: #513d72;
+    color:#ffffff;
     border: 0
 }
 
