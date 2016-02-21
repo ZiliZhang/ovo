@@ -5,7 +5,6 @@ body {
     height: 100%;
     background: #7558a3;
     padding-bottom: 80px;
-    color:#ffffff;
 }
 
 body {
@@ -16,7 +15,8 @@ body {
 /* Coustom pop out window */
 
 .reg {
-    border: 0
+    border: 0;
+    color:#ffffff;
 }
     
 .reg .reg-header {
@@ -24,6 +24,9 @@ body {
     padding: 5px 20px 0
 }
 
+.reg input{
+    color: #513d72;
+}
 
 .reg input[type="text"] {
     padding: 5px 10px;
@@ -55,8 +58,9 @@ body {
     border: 3px solid #d8d8d8
 }
 
-.reg button {
-    margin-left: 10px;
+.reg .btn-submit {
+    background: #513d72;
+    color:#ffffff;
     border: 0
 }
 
