@@ -40,8 +40,25 @@ body {
     box-shadow: none;
     border: 3px solid #d8d8d8
 }
+.reg input[type="password"] {
+    padding: 5px 10px;
+    min-height: 45px;
+    margin-right: 15px
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 3px solid #d8d8d8
+}
+
 .reg .input-large {
-    width: 263px;
+    width: 60%;
+}
+
+.reg .input-small {
+    width: 29%
 }
 
 .reg textarea.input-xlarge {
