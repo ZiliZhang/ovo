@@ -38,18 +38,5 @@ def db(request):
 
     greetings = Greeting.objects.all()
 
-    user = User()
-    user.save()
-
-    users = User.objects.all()
-
-    return render(request, 'db.html', {'greetings': greetings}, {'users': users})
-
-
-    
-
-
-
-
-
+    return render(request, 'db.html', {'greetings': greetings})
 
