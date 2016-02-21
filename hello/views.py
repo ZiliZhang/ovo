@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from .models import Greeting
+from .models import User
 
 # Create your views here.
 def index(request):
@@ -20,5 +21,10 @@ def db(request):
 
     greetings = Greeting.objects.all()
 
-    return render(request, 'db.html', {'greetings': greetings})
+    user = User()
+    user.save()
+
+    users = User.objects.all()
+
+    return render(request, 'db.html', {'greetings': greetings}, {'users': users})
 
