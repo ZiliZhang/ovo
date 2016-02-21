@@ -12,7 +12,6 @@ def reg(request):
     #return HttpResponse('Hello from Python!')
     return render(request, 'reg.html')
 
-
 def db(request):
 
     user = User()
@@ -22,3 +21,9 @@ def db(request):
 
     return render(request, 'db.html', {'users': users})
 
+def display_room(request):
+    if request.method == 'POST':
+        new_user = User(request.POST)
+        new_user.save()
+        return HttpResponse(new_user.first_name)
+    return render(request, 'reg.html')
