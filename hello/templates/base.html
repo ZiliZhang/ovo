@@ -22,7 +22,7 @@
             <a href="#about"><span class="glyphicon glyphicon-info-sign"></span> About Us</a>
           </li>
            <li>
-            <a href="reg.html"><span class="glyphicon glyphicon-user"></span> Registration </a>
+            <a href="reg.html"><span class="glyphicon glyphicon-user"></span> Registration</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -60,19 +60,15 @@
     <script src="../static/js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../static/js/bootstrap.min.js"></script>
-    <script>  
+   <script type="text/javascript">
       $(function() {
-           var crrUrl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+           var crrUrl = window.location.href;
            console.log("url is :" + crrUrl + ":");
            $(".nav li a").each(function(){
-                if($(this).attr("href") === "/"){
+                if ( crrUrl == this.href) {
                   console.log('hi');
                   $(this).addClass("active");
-                }else if($(this).attr("href") === "reg.html" ){
-                  console.log('hello');
-                  $(this).addClass("active");
                 }
-                
            })
       });
     </script>
