@@ -14,3 +14,6 @@ class User(models.Model):
 	birth_date = models.CharField(max_length=10)
 	gender = models.CharField(max_length=6)
 	age = models.PositiveIntegerField()
+
+class dog(models.Model):
+	name = models.CharField(max_length=30)
