@@ -19,7 +19,7 @@
             <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
           </li>
           <li>
-            <a href=""><span class="glyphicon glyphicon-info-sign"></span> About Us</a>
+            <a href="#about"><span class="glyphicon glyphicon-info-sign"></span> About Us</a>
           </li>
            <li>
             <a href="reg.html"><span class="glyphicon glyphicon-user"></span> Registration </a>
@@ -62,11 +62,18 @@
     <script src="../static/js/bootstrap.min.js"></script>
     <script>  
       $(function() {
-       var url = window.location.href;
-       $(".nav li a").each(function(){
-            if($(this).attr("href") == url || $(this).attr("href") == '' )
-            $(this).addClass("active");
-        })
+           var crrUrl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+           console.log("url is :" + crrUrl + ":");
+           $(".nav li a").each(function(){
+                if($(this).attr("href") === "/"){
+                  console.log('hi');
+                  $(this).addClass("active");
+                }else if($(this).attr("href") === "reg.html" ){
+                  console.log('hello');
+                  $(this).addClass("active");
+                }
+                
+           })
       });
     </script>
   </body>
