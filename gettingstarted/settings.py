@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd6ah7uccpoflij',
 	'USER': 'twweybplmunsab',
 	'PASSWORD': '7P1Z1cwitwBRRDAo_TWQ5Y-hgX',
@@ -97,7 +97,7 @@ USE_TZ = True
 
 
 # Parse database configuration from $DATABASE_URL
-# DATABASES['default'] =  dj_database_url.config()
+ DATABASES['default'] =  dj_database_url.config()
 
 # Enable Persistent Connections
 DATABASES['default']['CONN_MAX_AGE'] = 500
