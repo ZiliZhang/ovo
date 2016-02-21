@@ -32,21 +32,6 @@ def db(request):
 
     return render(request, 'db.html', {'greetings': greetings})
 
-def submit(request):
-    
-    user = User(request.POST)
-    u = User(email=request.POST.get('email'),
-    		first_name=request.POST.get('first_name'),
-    		last_name=request.POST.get('last_name'),
-    		username=request.POST.get('username'),
-    		password=request.POST.get('password'),
-    		birth_date=request.POST.get('birth_date'),
-    		gender=request.POST.get('gender'),
-    		age=request.POST.get('age'),
-		)
-    user.save()
-    return render(request, 'index.html')
-
     
 
 
