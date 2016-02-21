@@ -11,3 +11,7 @@ class RegistrationForm(forms.Form):
     # gender = forms.CharField(max_length=10)
     age = forms.IntegerField(min_value=0,required=True,widget=forms.TextInput(attrs={'class' : 'input-large','placeholder': 'Age',}))
 
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=15,widget=forms.TextInput(attrs={'class' : 'input-large','placeholder': 'Username',}))
+    password = forms.CharField(max_length=8,required=True,widget=forms.PasswordInput(attrs={'class' : 'input-large','placeholder': 'Password',}))
+    

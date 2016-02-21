@@ -62,23 +62,16 @@ body {
 }
 
 
-/* Coustom pop out window */
-
-.reg {
+/* Coustom Form*/
+form {
     border: 0;
-    color:#ffffff;
 }
-    
-.reg .reg-header {
-    border: 0;
-    padding: 5px 20px 0
-}
-
-.reg input{
+   
+form input{
     color: #513d72;
 }
 
-.reg input[type="text"],input[type="password"]  {
+form input[type="text"],input[type="password"]  {
     padding: 5px 10px;
     min-height: 45px;
     margin-right: 15px
@@ -88,9 +81,29 @@ body {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    border: 3px solid #d8d8d8;
+    border: 3px solid #e3ddec;
 }
 
+form textarea.input-xlarge {
+    width: 530px;
+    padding: 5px 10px;
+    min-height: 45px;
+    margin-right: 15px
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 3px solid #e3ddec;
+}
+
+.form-control:focus {
+  border-color: #513d72;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(81,61,114, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(81,61,114, .6);
+}
 
 .input-large {
     width: 60%;
@@ -104,77 +117,14 @@ body {
     width: 30%;
 }
 
-.reg textarea.input-xlarge {
-    width: 530px;
-    padding: 5px 10px;
-    min-height: 45px;
-    margin-right: 15px
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border: 3px solid #d8d8d8
-}
-
-.form-control:focus {
-  border-color: #513d72;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(81,61,114, .6);
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(81,61,114, .6);
-}
-.reg .btn-submit {
+.btn-submit {
     background: #513d72;
     color:#ffffff;
     border: 0
 }
 
 
-/* Coustom pop out window */
 
-.modal {
-    border: 0
-}
-    
-.modal .modal-header {
-    border: 0;
-    padding: 5px 20px 0
-}
-
-
-.modal input[type="text"],input[type="password"]{
-    padding: 5px 10px;
-    min-height: 45px;
-    margin-right: 15px
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border: 3px solid #d8d8d8
-}
-
-
-.modal textarea.input-xlarge {
-    width: 530px;
-    padding: 5px 10px;
-    min-height: 45px;
-    margin-right: 15px
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border: 3px solid #d8d8d8
-}
-
-.modal button {
-    margin-left: 10px;
-    border: 0
-}
 
 
 

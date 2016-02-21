@@ -34,21 +34,24 @@
     </nav> <!-- /.nav -->
 
     {% block content %}{% endblock %}
+
     <!-- Modal -->
     <div class = "modal fade" id ="login" role ="dialog">
         <div class ="modal-dialog">
             <div class = "modal-content">
                 <div class ="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <center><h3>Login</h3></center>
-                    <p></p>
+                    <center><h3 style="color:#7558a3">Login</h3></center>
                 </div>
                 <div class = "modal-body">
-                    <form action="" method="post" id="apply">
+                    <form  action="" method="post">
+                        {% csrf_token %}
                         <fieldset>
-                            <center><input type="text" class="input-large" name="name" placeholder="Username / Email"><br><br>
-                            <input type="password" class="input-large" name="password" placeholder="Password"><br><br>
-                            <button type ="submit" class="btn btn-light">Submit <i class="glyphicon glyphicon-log-in"></i></button></center>
+                            <center>
+                              {{lform.username}}<br><br>
+                              {{lform.password}}<br><br>
+                              <button type ="submit" class="btn btn-submit"> Submit <i class="glyphicon glyphicon-log-in"></i></button>
+                            </center>
                         </fieldset>
                     </form>
                 </div><!-- /.modal-body -->
@@ -60,7 +63,8 @@
     <script src="../static/js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../static/js/bootstrap.min.js"></script>
-   <script type="text/javascript">
+    <!-- Custom Script-->
+    <script type="text/javascript">
       $(function() {
            var crrUrl = window.location.href;
            console.log("url is :" + crrUrl + ":");
