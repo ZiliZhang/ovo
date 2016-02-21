@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd6ah7uccpoflij',
+	'USER': 'twweybplmunsab',
+	'PASSWORD': '7P1Z1cwitwBRRDAo_TWQ5Y-hgX',
+	'HOST': 'ec2-75-101-163-171.compute-1.amazonaws.com',
+	'PORT': '5432',
     }
 }
 
@@ -93,7 +97,7 @@ USE_TZ = True
 
 
 # Parse database configuration from $DATABASE_URL
-DATABASES['default'] =  dj_database_url.config()
+DATABASES['default'] =  dj_database_url.config(default='postgres://twweybplmunsab:7P1Z1cwitwBRRDAo_TWQ5Y-hgX@ec2-75-101-163-171.compute-1.amazonaws.com:5432/d6ah7uccpoflij')
 
 # Enable Persistent Connections
 DATABASES['default']['CONN_MAX_AGE'] = 500
