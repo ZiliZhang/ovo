@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-<<<<<<< HEAD
 class User(models.Model):
 	email = models.CharField(unique=True, max_length=50)
 	first_name = models.CharField(max_length=30)
@@ -11,10 +10,3 @@ class User(models.Model):
 	birth_date = models.CharField(max_length=10)
 	gender = models.CharField(max_length=6)
 	age = models.PositiveIntegerField()
-=======
-
-class User5(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-
->>>>>>> nami
