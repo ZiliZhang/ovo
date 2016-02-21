@@ -88,7 +88,7 @@ body {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    border: 3px solid #d8d8d8
+    border: 3px solid #d8d8d8;
 }
 
 
@@ -97,11 +97,11 @@ body {
 }
 
 .input-medium{
-    width: 50%
+    width: 50%;
 }
 
 .input-small {
-    width: 29%
+    width: 30%;
 }
 
 .reg textarea.input-xlarge {
@@ -129,6 +129,7 @@ body {
     color:#ffffff;
     border: 0
 }
+
 
 /* Coustom pop out window */
 

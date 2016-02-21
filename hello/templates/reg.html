@@ -16,21 +16,19 @@
 	        <form method="post">
 	        	{% csrf_token %}
 	            <fieldset>
-	            	{{form}}
-	            <!-- <input type="text" class="input-large" name="email" placeholder="Email" required="required"><br><br>
-	            <input type="text" class="input-small" style="margin-right:2%;" name="first_name" placeholder="First name" required="required">
-	            <input type="text" class="input-small" name="last_name" placeholder="Last name"><br><br>
-	            <input type="text" class="input-large" name="username" placeholder="Username"><br><br>
-	            <input type="password" class="input-large" name="password" placeholder="Password 6-8 digits"><br><br>
-	            <input type="text" class="input-large" name="birth_date" placeholder="Date of Birth: yyyy-mm-dd" required="require"><br><br>
-	            <div style="display: inline">
-		            <input type="radio" name="gender" value="male"> Male&nbsp;&nbsp;&nbsp;&nbsp;
-	  				<input type="radio" name="gender" value="female"> Female&nbsp;&nbsp;&nbsp;&nbsp;
-	  				<input type="radio" name="gender" value="other"> Other<br>
-	            </div>
-	            <br>
-	            <input type="text" class="input-large" name="age" placeholder="Age" required="require"><br><br> -->
-	            <input type ="submit" class="btn btn-submit">
+		            {{form.email}}<br><br>
+		            {{form.first_name}}
+		            {{form.last_name}}<br><br>
+		            {{form.username}}<br><br>
+		            {{form.password}}<br><br>
+		            {{form.birth_date}}<br><br>
+		            <div style="display: inline">
+			            {% for choice in form.gender %}
+  							{{ choice.tag }}&nbsp;{{ choice.choice_label }}	&nbsp;&nbsp;&nbsp;			
+  						{% endfor %}
+  					</div><br><br>
+		            {{form.age}}<br><br>
+		            <input type ="submit" class="btn btn-submit">
 	            </fieldset>
 	        </form>
 	    </div>
