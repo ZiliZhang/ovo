@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
+{% block log %}
+            <a><b> Logout </b><span class="glyphicon glyphicon-log-out"></span></a>
+{% endblock %}
+
 {% block content %}
 
   <div class="container text-center">
@@ -9,7 +13,7 @@
 	        <h3> Registration</h3>
 	    </div>
 	    <div>
-	        <form method="post">
+	        <form action="" method="post">
 	            <fieldset>
 	            <input type="text" class="input-large" name="email" placeholder="Email" required="required"><br><br>
 	            <input type="text" class="input-small" style="margin-right:2%;" name="first_name" placeholder="First name" required="required">
