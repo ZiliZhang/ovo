@@ -1,6 +1,10 @@
 from django.db import models
 
 # Create your models here.
+class Greeting(models.Model):
+	when = models.DateTimeField('date created', auto_now_add=True)
+
+
 class User(models.Model):
 	email = models.CharField(unique=True, max_length=50)
 	first_name = models.CharField(max_length=30)
