@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+  <div class="container">
+  	<div class="reg">
+	    <div class="reg-header">
+	        <h3> Registration</h3>
+	    </div>
+	    <div>
+	        <form method="post">
+	            <fieldset>
+	            <input type="text" class="input-large" id="tname" name="name" placeholder="What is your name?" required="required"><br><br>
+	            <input type="text" class="input-large" id="tcompany" name="company" placeholder="The name of your company"><br><br>
+	            <input type="text" class="input-large" id="tphone" name="phone" placeholder="Phone number"><br><br>
+	            <input type="text" class="input-large" id="temail" name="email" placeholder="Email" required="required"><br><br>
+	            <input type="text" class="input-large" id="taddress" name="address" placeholder="Address" required="trequired" style='width:50%'><br><br>
+	            <textarea class="input-xlarge" id="tMessage" name="Message" placeholder="Messages" style='width:50%'></textarea><br><br>
+	            <center><input type ="submit" class="btn btn-light"></center>
+	            </fieldset>
+	        </form>
+	    </div>
+	 </div>
+  </div>
+
+{% endblock %}
