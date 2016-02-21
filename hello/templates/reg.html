@@ -9,7 +9,7 @@
 	        <h3> Registration</h3>
 	    </div>
 	    <div>
-	        <form method="post">
+	        <form method="post" action="display_room">{% csrf_token %}
 	            <fieldset>
 	            <input type="text" class="input-large" name="email" placeholder="Email" required="required"><br><br>
 	            <input type="text" class="input-large" name="first_name" placeholder="First name" required="required"><br><br>

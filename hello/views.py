@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import Greeting
+from .models import Greeting, User
 
 # Create your views here.
 def index(request):
@@ -12,13 +12,9 @@ def reg(request):
     #return HttpResponse('Hello from Python!')
     return render(request, 'reg.html')
 
-
-def db(request):
-
-    greeting = Greeting()
-    greeting.save()
-
-    greetings = Greeting.objects.all()
-
-    return render(request, 'db.html', {'greetings': greetings})
-
+def display_room(request):
+    if request.method == 'POST':
+        new_user = User(request.POST)
+        new_user.save()
+        return HttpResponse(new_user.first_name)
+    return render(request, 'reg.html')
