@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 
 from .models import User
-from .forms import RegistrationForm
+from .forms import UserForm
 from .forms import LoginForm
 # Create your views here.
 def index(request):
@@ -11,7 +11,6 @@ def index(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
-            # print "hi\n"
             return HttpResponseRedirect('/')
     #Get Request            
     else:
@@ -21,22 +20,12 @@ def index(request):
 def reg(request):
     #return HttpResponse('Hello from Python!')
     if request.method == 'POST':
-        form = RegistrationForm(request.POST)
+        form = UserForm(request.POST)
         if form.is_valid():
-
+            new_user_entry = form.save()
     	    return HttpResponseRedirect('/')
     #Get Request    	    
     else:
-	    form = RegistrationForm()
+	    form = UserForm()
     return render(request, 'reg.html',{'form': form})
-
-
-def db(request):
-
-    greeting = Greeting()
-    greeting.save()
-
-    greetings = Greeting.objects.all()
-
-    return render(request, 'db.html', {'greetings': greetings})
 
