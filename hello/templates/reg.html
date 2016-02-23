@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block log %}
+            <a><b> Logout </b><span class="glyphicon glyphicon-log-out"></span></a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="container text-center">
+  	<div class="reg">
+	    <div class="reg-header">
+	        <h3 style="color:#ffffff"> Registration</h3>
+	    </div>
+	    <div>
+	        <form action="" method="post">
+	        	{% csrf_token %}
+	            <fieldset>
+		            {{form.email}}<br><br>
+		            {{form.first_name}}
+		            {{form.last_name}}<br><br>
+		            {{form.username}}<br><br>
+		            {{form.password}}<br><br>
+		            {{form.birth_date}}<br><br>
+		            <div style="display: inline">
+			            {% for choice in form.gender %}
+  							{{ choice.tag }}&nbsp;{{ choice.choice_label }}	&nbsp;&nbsp;&nbsp;			
+  						{% endfor %}
+  					</div><br><br>
+		            {{form.age}}<br><br>
+		            <input type ="submit" class="btn btn-submit">
+	            </fieldset>
+	        </form>
+	    </div>
+	 </div>
+  </div>
+
+{% endblock %}

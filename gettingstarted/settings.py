@@ -75,15 +75,34 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'd6ah7uccpoflij',
+#       'USER': 'twweybplmunsab',
+#       'PASSWORD': '7P1Z1cwitwBRRDAo_TWQ5Y-hgX',
+#       'HOST': 'ec2-75-101-163-171.compute-1.amazonaws.com',
+#       'PORT': '5432',
+#  }
+#}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd6ah7uccpoflij',
-	'USER': 'twweybplmunsab',
-	'PASSWORD': '7P1Z1cwitwBRRDAo_TWQ5Y-hgX',
-	'HOST': 'ec2-75-101-163-171.compute-1.amazonaws.com',
-	'PORT': '5432'
+        'USER': 'twweybplmunsab',
+        'PASSWORD': '7P1Z1cwitwBRRDAo_TWQ5Y-hgX',
+        'HOST': 'ec2-75-101-163-171.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
+   # 'default': {
+       # 'ENGINE': 'django.db.backends.postgresql',
+       # 'NAME': 'mydb',
+       # 'USER': 'ovo',
+       # 'PASSWORD': 'zaq1xsw2',
+       # 'HOST': '127.0.0.1',
+       # 'PORT': '5432',
+   # }
 }
 
 # Internationalization
@@ -97,7 +116,7 @@ USE_TZ = True
 
 
 # Parse database configuration from $DATABASE_URL
-DATABASES['default'] =  dj_database_url.config()
+# DATABASES['default'] =  dj_database_url.config(default='postgres://twweybplmunsab:7P1Z1cwitwBRRDAo_TWQ5Y-hgX@ec2-75-101-163-171.compute-1.amazonaws.com:5432/d6ah7uccpoflij')
 
 # Enable Persistent Connections
 DATABASES['default']['CONN_MAX_AGE'] = 500
