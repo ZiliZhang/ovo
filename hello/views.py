@@ -29,3 +29,7 @@ def reg(request):
 	    form = UserForm()
     return render(request, 'reg.html',{'form': form})
 
+def success(request):
+    return render(request, 'success.html')
+
+
