@@ -23,7 +23,7 @@ def reg(request):
         form = UserForm(request.POST)
         if form.is_valid():
             new_user_entry = form.save()
-    	    return HttpResponseRedirect('/')
+    	    return HttpResponseRedirect('success.html')
     #Get Request    	    
     else:
 	    form = UserForm()
